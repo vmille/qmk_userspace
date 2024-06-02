@@ -14,8 +14,7 @@
 enum my_custom_keycodes {
     CTRL_MAJ_V_LCH = SAFE_RANGE,
     GUI_V_LCH,
-    ENT_LCH,
-    NEW_SAFE_RANGE  //use "NEW_SAFE_RANGE" for keymap specific codes
+    ENT_LCH
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record);

@@ -1,6 +1,8 @@
 {
     "userspace_version": "1.0",
     "build_targets": [
-        ["bastardkb/dilemma/4x6_4", "vmille"]
+        ["bastardkb/dilemma/4x6_4", "vmille"],
+        ["blank_tehnologii/manibus", "vmille"],
+        ["ergodox_ez/base", "vmille"]
     ]
 }

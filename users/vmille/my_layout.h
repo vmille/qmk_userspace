@@ -6,7 +6,12 @@
 
 #include "my_keycodes.h"
 
+#ifdef IS_ERGODOX_EZ
+#define LAYOUT_WRAPPER(...) LAYOUT_ergodox_pretty(__VA_ARGS__)
+#else
 #define LAYOUT_WRAPPER(...) LAYOUT(__VA_ARGS__)
+#endif
+
 
 #define ______________BASE_R1_LEFT______________ KC_EQL , KC_1           , KC_2        , KC_3        , KC_4        , KC_5
 #define ______________BASE_R2_LEFT______________ KC_BSLS, KC_Q           , KC_W        , KC_E        , KC_R        , KC_T

@@ -1,12 +1,4 @@
-//
-// Created by Vivien Mille on 02/06/2024.
-//
-
-#ifndef QMK_USERSPACE_CONFIG_H
-#define QMK_USERSPACE_CONFIG_H
-/**
- * Copyright 2021 Charly Delay <charly@codesink.dev> (@0xcharly)
- * Copyright 2023 casuanoob <casuanoob@hotmail.com> (@casuanoob)
+/* Copyright 2021 SamuraiKek
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,11 +14,5 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#undef POINTING_DEVICE_GESTURES_SCROLL_ENABLE
-#define DILEMMA_DRAGSCROLL_REVERSE_X 1
-#define DILEMMA_MINIMUM_DEFAULT_DPI 350
-#define DILEMMA_MINIMUM_SNIPING_DPI 300
-#define DILEMMA_DRAGSCROLL_DPI 150
-#define CIRQUE_PINNACLE_TAP_ENABLE 1
-
-#endif // QMK_USERSPACE_CONFIG_H
+#pragma once
+#define EE_HANDS
