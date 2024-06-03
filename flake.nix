@@ -10,8 +10,9 @@
         in
         {
           devShells.default = pkgs.mkShell {
-            packages = [pkgs.qmk pkgs.jetbrains.clion];
+            packages = [pkgs.jetbrains.clion];
           };
         }
       );
 }
+
