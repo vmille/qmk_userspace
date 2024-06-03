@@ -13,7 +13,7 @@
 
 #ifndef SNIPING
 #define SNIPING XXXXXXX
-#define
+#endif
 
 #ifndef DRGSCRL
 #define DRGSCRL XXXXXXX
