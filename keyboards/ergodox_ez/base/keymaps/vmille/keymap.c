@@ -1,4 +1,5 @@
 #include QMK_KEYBOARD_H
+#include "version.h"
 
 #define IS_ERGODOX_EZ
 
