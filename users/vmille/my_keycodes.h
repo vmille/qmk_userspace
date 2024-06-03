@@ -11,6 +11,15 @@
 #define RUN S(KC_F9)
 #define DEBUG S(KC_F10)
 
+#ifndef SNIPING
+#define SNIPING XXXXXXX
+#define
+
+#ifndef DRGSCRL
+#define DRGSCRL XXXXXXX
+#endif
+
+
 enum my_custom_keycodes {
     CTRL_MAJ_V_LCH = SAFE_RANGE,
     GUI_V_LCH,
