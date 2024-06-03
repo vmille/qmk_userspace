@@ -5,6 +5,7 @@
 #include "my_rgb.h"
 #include "my_layers.h"
 
+#ifdef RGB_MATRIX_ENABLE
 bool rgb_matrix_indicators_user(void) {
     uint8_t current_layer = get_highest_layer(layer_state);
     switch (current_layer) {
@@ -22,3 +23,4 @@ bool rgb_matrix_indicators_user(void) {
     }
     return false;
 }
+#endif
