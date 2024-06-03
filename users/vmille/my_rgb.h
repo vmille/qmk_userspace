@@ -10,8 +10,8 @@
 #ifdef RGB_MATRIX_ENABLE
 // Forward-declare this helper function since it is defined in rgb_matrix.c.7
 void rgb_matrix_update_pwm_buffers(void);
-#endif
 
 bool rgb_matrix_indicators_user(void);
+#endif
 
 #endif // QMK_USERSPACE_MY_RGB_H

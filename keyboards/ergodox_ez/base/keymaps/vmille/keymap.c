@@ -1,5 +1,7 @@
 #include QMK_KEYBOARD_H
+
 #define IS_ERGODOX_EZ
+
 #include "my_keycodes.h"
 #include "my_layout.h"
 #include "my_layers.h"
