@@ -8,7 +8,7 @@
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-[BASE] = LAYOUT_ergodox_pretty(
+[BASE] = LAYOUT_WRAPPER(
   // left hand
   ______________BASE_R1_LEFT______________, XXXXXXX,            XXXXXXX, ______________BASE_R1_RIGHT______________,
   ______________BASE_R2_LEFT______________, XXXXXXX,            XXXXXXX, ______________BASE_R2_RIGHT______________,
@@ -19,7 +19,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                             XXXXXXX,            XXXXXXX,
                             ______BASE_T_LEFT______,            ______BASE_T_RIGHT______
 ),
-[FUNCTION] = LAYOUT_ergodox_pretty(
+[FUNCTION] = LAYOUT_WRAPPER(
   // left hand
   ______________FUNCTION_R1_LEFT______________, XXXXXXX,            XXXXXXX, ______________FUNCTION_R1_RIGHT______________,
   ______________FUNCTION_R2_LEFT______________, XXXXXXX,            XXXXXXX, ______________FUNCTION_R2_RIGHT______________,
@@ -30,7 +30,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                 XXXXXXX,            XXXXXXX,
                             ______FUNCTION_T_LEFT______,            ______FUNCTION_T_RIGHT______
 ),
-[NAV] = LAYOUT_ergodox_pretty(
+[NAV] = LAYOUT_WRAPPER(
   // left hand
   ______________NAV_R1_LEFT______________, XXXXXXX,            XXXXXXX, ______________NAV_R1_RIGHT______________,
   ______________NAV_R2_LEFT______________, XXXXXXX,            XXXXXXX, ______________NAV_R2_RIGHT______________,
@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                            XXXXXXX,            XXXXXXX,
                             ______NAV_T_LEFT______,            ______NAV_T_RIGHT______
 ),
-[IDE] = LAYOUT_ergodox_pretty(
+[IDE] = LAYOUT_WRAPPER(
   // left hand
   ______________IDE_R1_LEFT______________, XXXXXXX,            XXXXXXX, ______________IDE_R1_RIGHT______________,
   ______________IDE_R2_LEFT______________, XXXXXXX,            XXXXXXX, ______________IDE_R2_RIGHT______________,
@@ -52,7 +52,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                            XXXXXXX,            XXXXXXX,
                             ______IDE_T_LEFT______,            ______IDE_T_RIGHT______
 ),
-[MOUSE] = LAYOUT_ergodox_pretty(
+[MOUSE] = LAYOUT_WRAPPER(
   // left hand
   ______________MOUSE_R1_LEFT______________, XXXXXXX,            XXXXXXX, ______________MOUSE_R1_RIGHT______________,
   ______________MOUSE_R2_LEFT______________, XXXXXXX,            XXXXXXX, ______________MOUSE_R2_RIGHT______________,
