@@ -18,14 +18,89 @@
  */
 #include QMK_KEYBOARD_H
 
+typedef enum {
+    TD_NONE,
+    TD_SINGLE_TAP,
+    TD_DOUBLE_TAP,
+    TD_SINGLE_HOLD,
+    TD_DOUBLE_HOLD,
+    TD_UNKNOWN
+} td_state_t;
+
+typedef struct {
+    bool is_press_action;
+    td_state_t td_state;
+} td_tap_t;
+
 enum {
     TD_KEY
 };
 
-tap_dance_action_t tap_dance_actions[] = {
-   [TD_KEY] = ACTION_TAP_DANCE_DOUBLE(DRAG_SCROLL, KC_E)
-};
+td_state_t cur_dance(tap_dance_state_t *state);
+
+// For the x tap dance. Put it here so it can be used in any keymap
+void td_finished(tap_dance_state_t* state, void* user_data);
+void td_reset(tap_dance_state_t* state, void* user_data);
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [0] = LAYOUT( DRAG_SCROLL )
+    [0] = LAYOUT( TD(TD_KEY) )
+};
+
+td_state_t cur_dance(tap_dance_state_t* state) {
+    if (state->count == 1) {
+        if (state->interrupted || !state->pressed) {
+            return TD_SINGLE_TAP;
+        }
+        else {
+            return TD_SINGLE_HOLD;
+        }
+    }
+    else if (state->count == 2) {
+        if (state->pressed) {
+            return TD_DOUBLE_HOLD;
+        }
+        else {
+            return TD_DOUBLE_TAP;
+        }
+    }
+    return TD_UNKNOWN;
+}
+
+static td_tap_t td_tap_state = {
+    .is_press_action = true,
+    .td_state = TD_NONE
+};
+
+void td_finished(tap_dance_state_t* state, void* user_data) {
+    td_tap_state.td_state = cur_dance(state);
+    switch (td_tap_state.td_state) {
+        case TD_SINGLE_HOLD:
+            toggle_drag_scroll();
+            break;
+        case TD_DOUBLE_TAP:
+            cycle_dpi();
+            break;
+        case TD_DOUBLE_HOLD:
+            char str[16];
+            sprintf(str, "%d", dpi_array[keyboard_config.dpi_config]);
+            SEND_STRING(str);
+            break;
+        default:
+            break;
+    }
+}
+
+void td_reset(tap_dance_state_t *state, void *user_data) {
+    switch (td_tap_state.td_state) {
+        case TD_SINGLE_HOLD:
+            toggle_drag_scroll();
+            break;
+        default:
+            break;
+    }
+    td_tap_state.td_state = TD_NONE;
+}
+
+tap_dance_action_t tap_dance_actions[] = {
+    [TD_KEY] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_finished, td_reset)
 };
