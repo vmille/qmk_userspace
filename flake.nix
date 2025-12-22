@@ -10,7 +10,7 @@
         in
         {
           devShells.default = pkgs.mkShell {
-            packages = [pkgs.jetbrains.clion pkgs.qmk];
+            packages = [pkgs.jetbrains.clion pkgs.qmk pkgs.dos2unix];
           };
         }
       );
