@@ -21,7 +21,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_ENT,                     MO(IDE), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                                    XXXXXXX, XXXXXXX,            XXXXXXX, XXXXXXX,
                                             XXXXXXX,            XXXXXXX,
-                  KC_BTN1, LT(NAV, KC_DEL), XXXXXXX,             XXXXXXX, LT(FUNCTION, KC_BSPC), KC_SPC
+                  MS_BTN1, LT(NAV, KC_DEL), XXXXXXX,            XXXXXXX, LT(FUNCTION, KC_BSPC), KC_SPC
 ),
 [FUNCTION] = LAYOUT_WRAPPER(
   // left hand
@@ -62,10 +62,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ______________MOUSE_R2_LEFT______________, XXXXXXX,            XXXXXXX, ______________MOUSE_R2_RIGHT______________,
   ______________MOUSE_R3_LEFT______________,                              ______________MOUSE_R3_RIGHT______________,
   ______________MOUSE_R4_LEFT______________, XXXXXXX,            XXXXXXX, ______________MOUSE_R4_RIGHT______________,
-    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_BTN2,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, MS_BTN2,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                                    XXXXXXX, XXXXXXX,            XXXXXXX, XXXXXXX,
                                             XXXXXXX,            XXXXXXX,
-                          KC_BTN1, KC_BTN3, XXXXXXX,            XXXXXXX, XXXXXXX, XXXXXXX
+                          MS_BTN1, MS_BTN3, XXXXXXX,            XXXXXXX, XXXXXXX, XXXXXXX
 )
 };
 // clang-format on
