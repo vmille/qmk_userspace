@@ -1,10 +1,9 @@
 //
 // Created by Vivien on 5/1/2024.
 //
-#ifndef QMK_USERSPACE_MY_LAYOUT_H
-#define QMK_USERSPACE_MY_LAYOUT_H
+#pragma once
 
-#include "my_keycodes.h"
+#include "keyboard_keycodes.h"
 
 #define LAYOUT_WRAPPER(...) LAYOUT(__VA_ARGS__)
 
@@ -69,6 +68,3 @@
 #define ______________MOUSE_R3_RIGHT______________ KC_LCTL, KC_RCTL, KC_LSFT, KC_LALT, XXXXXXX, XXXXXXX
 #define ______________MOUSE_R4_RIGHT______________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 #define ______MOUSE_T_RIGHT______ XXXXXXX, XXXXXXX, XXXXXXX
-
-
-#endif // QMK_USERSPACE_MY_LAYOUT_H

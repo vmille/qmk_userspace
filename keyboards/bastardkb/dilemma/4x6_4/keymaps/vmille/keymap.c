@@ -17,11 +17,11 @@
 */
 #include QMK_KEYBOARD_H
 
-#include "my_keycodes.h"
-#include "my_layout.h"
-#include "my_layers.h"
-#include "my_rgb.h"
-#include "my_encoders.h"
+#include "keyboard_keycodes.h"
+#include "keyboard_layout.h"
+#include "keyboard_layers.h"
+#include "keyboard_rgb.h"
+#include "keyboard_encoders.h"
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {

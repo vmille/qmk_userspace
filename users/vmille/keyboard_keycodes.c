@@ -2,8 +2,8 @@
 // Created by Vivien Mille on 02/06/2024.
 //
 
-#include "my_keycodes.h"
-#include "my_layers.h"
+#include "keyboard_keycodes.h"
+#include "keyboard_layers.h"
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {

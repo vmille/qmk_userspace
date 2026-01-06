@@ -3,9 +3,9 @@
 
 #define IS_ERGODOX_EZ
 
-#include "my_keycodes.h"
-#include "my_layout.h"
-#include "my_layers.h"
+#include "keyboard_keycodes.h"
+#include "keyboard_layout.h"
+#include "keyboard_layers.h"
 
 #undef LAYOUT_WRAPPER
 #define LAYOUT_WRAPPER(...) LAYOUT_ergodox_pretty(__VA_ARGS__)

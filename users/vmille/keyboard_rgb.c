@@ -2,8 +2,8 @@
 // Created by Vivien Mille on 02/06/2024.
 //
 
-#include "my_rgb.h"
-#include "my_layers.h"
+#include "keyboard_rgb.h"
+#include "keyboard_layers.h"
 
 #ifdef RGB_MATRIX_ENABLE
 bool rgb_matrix_indicators_user(void) {

@@ -2,8 +2,7 @@
 // Created by Vivien Mille on 02/06/2024.
 //
 
-#ifndef QMK_USERSPACE_MY_LAYERS_H
-#define QMK_USERSPACE_MY_LAYERS_H
+#pragma once
 
 enum my_keymap_layers {
     BASE = 0,
@@ -12,5 +11,3 @@ enum my_keymap_layers {
     IDE,
     MOUSE
 };
-
-#endif // QMK_USERSPACE_MY_LAYERS_H

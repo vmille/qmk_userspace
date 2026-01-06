@@ -1,1 +1,1 @@
-SRC += my_rgb.c my_keycodes.c
+SRC += keyboard_rgb.c keyboard_keycodes.c

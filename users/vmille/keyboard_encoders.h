@@ -2,8 +2,7 @@
 // Created by Vivien Mille on 02/06/2024.
 //
 
-#ifndef QMK_USERSPACE_MY_ENCODERS_H
-#define QMK_USERSPACE_MY_ENCODERS_H
+#pragma once
 
 #include QMK_KEYBOARD_H
 
@@ -19,5 +18,3 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
 
 // clang-format on
 #endif // ENCODER_MAP_ENABLE
-
-#endif // QMK_USERSPACE_MY_ENCODERS_H
