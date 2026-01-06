@@ -24,5 +24,5 @@ tap_dance_action_t tap_dance_actions[] = {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [0] = LAYOUT( KC_WBAK, KC_COPY, KC_PASTE, DPI_CONFIG, MS_BTN1, TD(TD_SCROLL_DPI) )
+    [0] = LAYOUT( KC_WBAK, KC_COPY, KC_PASTE, KC_WFWD, MS_BTN1, TD(TD_SCROLL_DPI) )
 };
