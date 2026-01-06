@@ -1,5 +1,5 @@
 MOUSEKEY_ENABLE = yes       # Mouse keys
-NKRO_ENABLE = no           # Enable N-Key Rollover
-EXTRAKEY_ENABLE = no
+NKRO_ENABLE = yes           # Enable N-Key Rollover
+EXTRAKEY_ENABLE = yes
 SPLIT_KEYBOARD = yes
-LTO_ENABLE = true
+LTO_ENABLE = yes
